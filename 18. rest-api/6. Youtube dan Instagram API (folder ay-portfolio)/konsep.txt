@@ -1,0 +1,4 @@
+API Client
+- file_get_contents()   : PHP
+- ajax                  : Javascript
+- cURL                  : PHP

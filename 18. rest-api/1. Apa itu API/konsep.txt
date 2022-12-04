@@ -1,0 +1,85 @@
+API (Application Programming Interfaces), Penyebutan kata API masih sangat global
+
+API (Application Programming Interface) adalah sekumpulan fungsi, subroutine, protokol kuminikasi, atau kakas / tools untuk membuat perangkat lunak.
+
+Interface / antarmuka? bagian yang sama antara dua atau lebih komponen terpisah pada sebuah sistem komputer. Contohnya Matherboatd Interface, Network Interface, Audio Interface, Graphical User Interface (GUI)
+
+API
+- Antarmuka yang berupa kumpulan fungsi yang dapat dipanggil atau dijalankan oleh program lain
+- Penerapanya sangat luas
+	* Bahasa Pemograman
+		^ PHP
+			$mysqli = new mysqli('localhost', 'root', '', 'mahasiswa');
+			$result = $mysqli->query('SELECT * FROM mahasiswa');
+			$row = $result->fetch_assoc();
+
+			$pdo = new PDO('mysql:host=localhost;dbname=mahasiswa', 'root', '');
+			$statement = $pdo->query('SELECT * FROM mahasiswa');
+			$row = $statement->fetch(PDO::FETCH_ASSOC);
+
+		^ Javascript
+			let tombol = document.querySelector('#tombol');
+			judul.addEventListener('click', function(){
+				console.log('tombol ditekan!');
+			});
+
+	* Library & Framework
+		^ Codeigneter
+			$this->db->get('mahasiswa');
+
+		^ JQuery
+			$.ajax({
+				url: 'http://localhost/phpmvc/public/mahasiswa/getubah',
+				data: {id: id},
+				method: 'post',
+				dataType: 'json',
+				success: daat => {
+					$('#nama').val(data.nama);
+					$('#nim').val(data.nim);
+					$('#email').val(data.email);
+					$('#jurusan').val(data.jurusan);
+					$('#id').val(data.id);
+				}
+			});
+
+	* Sistem Operasi
+		^ Windows API
+			- Base Service : kernel.dll
+			- Graphic Device Interface : win32k.sys
+			- User Interface : user32.dll
+
+		^ iOS APi
+			- Contact : CNMutuableContact()
+			- Camere : AVCaptureDevice()
+
+		^ Androit APi
+			- ContactsContract.rawContacts
+
+	* Web API / Web Service
+		^ SOAP (Simple Object Access Protocol)
+		^ REST (REpresentational State Transfer)
+
+Biasanya istilah API sering tertukar maksud kita ingin membuat Web Service tapi kita menyebutnya API, padahal API yang umumnya sedangkan Web Service bagian dari API, padahal Web Service sendiri istilahnya jyga masih umum salah satu jenis Web Service yaitu REST API
+
+Web API / Web Service sebuah sistem perangkat lunak yang dibuat untuk mendukung interperabilitas / interkasi antara 2 aplikasi yang berbeda melalui jaringan
+Jadi jika kita membuat Web Aplication saja yang langsung terhubung dengan Database, dengan adanya Web Service kita dapat terhubung dengan aplikasi lain seperti Mobile Application, Cloud-Based Services, Parther Application, Cloud Resources, Application Servers, Legecy Application tanpa memperdulikan bahasanya apa, teknologinya apa dan sistem operasinya apa.	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

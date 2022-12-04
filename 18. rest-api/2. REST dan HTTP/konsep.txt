@@ -1,0 +1,97 @@
+REST API (REpresentational State Transfer) merupakan Gaya arsitektural perangkat lunak yang di dalamnya mendefinisikan aturan-aturan untk membuat web service
+
+----------	request	   -----		   ---	 --------
+| web app|	--------> | in  | ------> |	A |	|  Web   |		 --------	
+|	in   |			  |	ter |		  | P | |		 |------|DATABASE|
+| browse |  <-------  |	net | <------ | I |	| Server |		 --------	
+----------	response   -----           ---   --------
+
+Ilustrasi REST API pada kegiatan yang ada di Restourant
+Kita customer atau client yang mereqeust ke API, sedangkan weather atau API penghubung antara kita custemer dan dapur untuk memproduksi makanan yang kita pesan. Menu atau REST API (aturan pekmesanan), menu bertujuan agar customer tidak memesan sembarang menu walaupun sebenarmya memungkinkan. Misalnya kita datang ke pizza hut kita ingin memesan telur mata sapi, jika di menu (REST API) tidak ada maka kita tidak bisa memesan menu itu walaupun koki yang ada di pizza hut bisa membat telur mata sapi
+
+Kesimpulan
+- Customer (Client)
+- Wheaters (API / penghubung)
+- Wheaters mencatat (Reqeust)
+- Menu (REST API / aturan)
+- Dapur (Database)
+- Wheaters mengantar makanan ke customer (Response)
+- Makanan (data yang dikirim / diterima biasanya berupa JSON)
+
+REST API
+- REpresentational State Transfer
+- Gaya perancangan / Arcitectural Style
+- Statels (tida ada state)
+- By. Roy Fielding, disertasi PhD-nya
+- Hampir selalu menggunakan HTTP
+- Memungkinkan interaksi antara mensin dengan mesin
+
+HTTP (Hypertext Transfer Protocol)
+URL (Uniform Resource Locator) sebuah alamat untuk mengakses sumber data berupa html, css, javascript, gambar, dll.
+Kesimpulan URL:
+- Alamat dari sebuah resource yang daoat diakses di internet
+- Contoh:
+	^ https://www.facebook.com/index.php
+	^ http://www.alfianyulianto.net/indx.php
+- Dapat diubah denga mod_rewrite atau .htaccess
+
+Kode Status : status yang dikirimkan dari REST API ke REST Client
+- 100 : Informasi Response
+- 200 : Success
+- 300 : Redirect
+- 400 : Client Error
+- 404 : Not Found
+- 500 : Server Error
+- https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+Kenapa butuh kode status? karena dengan REST API yang berinteraksi antara mesin dengan mesin
+
+RESTful : keadan dimana url yang ada sesuai dengan HTTP Method
+
+HTTP Method / Verbs
+- get : mengambil data
+- post : menambah data
+- put : menbah data
+- delete : menghapus data
+- patch
+- continue
+- options
+- https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+Pada borwser tidak memiliki kemampuan untuk menggunakan put atau delete tapi bahasa pemograman banyak yang bisa menggunakan put dan delete
+
+
+			Tanpa menggunaakn REST API 
+GET		localhost/ci-app/mahasiswa/
+GET		localhost/ci-app/mahasiswa/detail/12
+POST	localhost/ci-app/mahasiswa/tambah
+GET		localhost/ci-app/mahasiswa/hapus/3
+POST	localhost/ci-app/mahasiswa/ubah/38
+
+
+			Menggunaakn REST API 
+GET		localhost/ci-app/mahasiswa/
+GET		localhost/ci-app/mahasiswa/12
+POST	localhost/ci-app/mahasiswa/
+DELETE  localhost/ci-app/mahasiswa/3
+PUT	    localhost/ci-app/mahasiswa/38
+
+ENDSPOINT : sebuah url
+
+Statless (ketidak adaan state pada aplikasi)
+- Setiap request HTTP dilakukan secara terisolasi
+- Server tidak boleh menyimpan state apapun mengenai session dari client
+- Setiap request dari client harus berisi semua informasi yang dibutuhkan server, termasuk informasi otentikasi
+
+
+Kesimpulan REST API
+- Menggunakan HTTP method yang benar
+- URI/ endspoints-nya menggunakan kata benda, bukan kata kerja (misal localhost/ci-app/mahasiswa/tambah itu tidak boleh ini harus sampai kata benda bukan kata kerja jadi localhost/ci-app/mahasiswa tinggal kita mainkan HTTP Methodnya)
+- Stateless
+
+
+
+
+
+
+
+
+

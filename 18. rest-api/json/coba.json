@@ -1,0 +1,32 @@
+[
+	{
+		"nama": "Alfian Yulianto",
+		"umur": 21,
+		"nim": "L200180121",
+		"lulus": true,
+		"hobi": [
+			"coding", 
+			"gaming", 
+			"swiming"
+		],
+		"pembimbing": {
+			"pembimbing1" : "Azizah Fatmawati, S.T., M.Cs.",
+			"pembimbing2" : "Maryam, S.Kom., M.Sc."
+		}
+	},
+	{
+	"nama": "Alfian Yulianto",
+	"umur": 21,
+	"nim": "L200180121",
+	"lulus": true,
+	"hobi": [
+		"coding", 
+		"gaming", 
+		"swiming"
+	],
+	"pembimbing": {
+		"pembimbing1" : "Azizah Fatmawati, S.T., M.Cs.",
+		"pembimbing2" : "Maryam, S.Kom., M.Sc."
+	}
+}
+]

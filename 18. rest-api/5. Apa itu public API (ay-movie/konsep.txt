@@ -1,0 +1,15 @@
+Public API adalah sebuah API (REST API) yang dapat diakses secara public, yang di dalamnya tersedia aturan untuk development agar dapat mengakses data.
+
+Google API - https://console.developers.google.com/
+Facebook - https://developers.facebook.com/
+
+Public API
+- https://any-api.com/
+- https://github.com/toddmotto/public-apis
+- https://github.com/farizdotid   (public API yang ada di Indonesia)
+
+Otentikasi (Auth)
+- Tanpa otentikasi
+- Key / Token
+- OAuth (login menggunakan google, facebook atau lain-nya)
+- CORS

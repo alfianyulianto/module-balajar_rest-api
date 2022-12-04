@@ -1,0 +1,18 @@
+JWT ( JSON Web Toke)
+
+Encode:                                             Decode :
+e6GkJ28iLvC4.ey0pOH1bZM.wR5jKga7u8                  HEADER: ALGORITHM & TOKEN TYPE
+                                                    {
+                                                      "alg": "HS256",
+                                                      "type": "JWT"
+                                                    }
+
+                                                    PAYLOAD: DATA
+                                                    {
+                                                      "sub":"1234567890",
+                                                      "name": "Alfian Yulianto",
+                                                      "iat": 1612581
+                                                    }
+
+                                                    VERIFY SIGNATURE
+                                                    

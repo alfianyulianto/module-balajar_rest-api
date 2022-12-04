@@ -1,0 +1,131 @@
+JSON ( Javascript Object Notation) adalah sebuah file format standar yang menggunakan tulisan yang dapat dibaca oleh manusia untuk pertukaran data, yang di dalamnya berisi pasangan antara key dan value.
+
+JSON
+- Format pertukaran data tekstual yang sangat ringan
+- Sintaksnya sangat sederhana dan jelas (dibanding XML)
+- Dapat digunakan pada beragam bahasa pemograman
+- Tiap bahasa pemograman memiliki cara tersendiri untuk berinteraksi dengan JSON
+- Dibuat berdasarkan format Object pada javascript
+- Digunakan untuk file konfigrasi (tidak disarankan karena JSON tidak support sintak komentar)
+- Tipe file JSON memiliki ekstensi .json
+- Format JSON dibuat dan diusulkan oleg Douglas Crockford
+
+JSON vs XML
+- JSON
+{
+	"mahasiswa": [
+		{
+			"nama" : "Alfian Yulianto",
+			"nim" : "L200180121",
+			"email" : "l200180121@students.ums.ac.id",
+			"jurusan" : "Teknik Informatika"
+		}
+		{
+			"nama" : "Erik Doank",
+			"nim" : "L200200200",
+			"email" : "l200200200@student.ums.ac.id",
+			"jurusan" : "Teknik Informatika"
+		}
+	]
+}
+
+- XML 
+<ums>
+	<mahasiswa>
+		<nama>Alfian Yulianto</nama>
+		<nim>L200180121</nim>
+		<email>l200180121@students.ums.ac.id</email>
+		<jurusan>Teknik Informatika</jurusan>
+	</mahasiswa>
+	<mahasiswa>
+		<nama>Erik Doank</nama>
+		<nim>L200200200</nim>
+		<email>l200200200@students.ums.ac.id</email>
+		<jurusan>Teknik Informatika</jurusan>
+	</mahasiswa>
+</ums>
+
+Object (pada javascript) merupakan kumpulan property, dan property ditlis dalam bentuk pasanga antara key dan value
+var orang = {
+	nama: "Alfian Yulianto",
+	umur: 21,
+	pekerjaan: 'programer',
+	sapa: function() {
+		return `Hi, nama saya ${this.nama} usia saya ${this.umr} tahun, dan saya adalah seorang ${this.pekerjaan}`;
+	}
+}
+
+JSON
+- pasangang {"key":"value"}
+- JSON key nya terdapat kutip
+- Di dalamnya tidak memiliki method, sedangkan Object di dalamnya memungkinkan kita untuk memiliki method. 
+{
+	"nama": "Alfian Yulianto",
+	"umur": 21,
+	"pekerjaan": "Dosen"
+}
+
+Tipe Data dari value pada JSON
+- Boolean : true / false
+- Array : ["value1", "value2", 21, [], {}, ...]
+- String : teks / unicode, dibungksu menggunakan " "
+- Object : {"key":"value"}
+- Number : integer / float
+- Null : null
+
+Bekerja dengan JSON
+- PHP
+	^ json_encode()	: untuk mengubah array atau object menjadi JSON
+		$data = [
+			"a"=>1,
+			"b"=>2,
+			"c"=>3
+		];
+		echo json_encode($data);	// hasil {"a":1, "b":2, "c":3}
+
+	^ json_decode() : untuk mengubah JSON menjadi array atau object
+	^ file_get_contents() : untuk mengakses JSON dari tempat lain
+		$contents = file_get_contents('data.json');		// ambil data json dari file
+		$contents = utf8_encode($contents);		// ubah standar encodingnya	(optional)
+		$results = json_decode($contents, true); 	// ubah string json menjadi array associative, jika true maka akan menjadi array jika true tidak ada maka akan menjadi object
+
+- Javascript
+	^ JSON.stringify() : untuk mengubah object menjadi JSON
+		var data = {
+			a: '1',
+			b: '2',
+			c: '3'
+		}
+
+		console.log(JSON.stringify(data));	// hasil {"a":"1", "b":"2", "c":"3"}
+
+	^ JSON.parse : untuk mengubah JSON menjadi Object
+	^ Mengakses JSON
+		* XMLHttpRequest
+		* JQuery
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
